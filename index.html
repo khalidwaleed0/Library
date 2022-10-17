@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="style.css" defer />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<h1>Library</h1>
+			<button id="btn-login">Log in</button>
+		</header>
+		<main>
+			<button id="btn-add-book">+ Add book</button>
+		</main>
+		<footer>
+			<a href="https://github.com/khalidwaleed0/Library">
+				<img src="github.png" />
+				<p>@khalidwaleed0</p>
+			</a>
+		</footer>
+        <div class="modal-add-book">
+            <form>
+                <h3>Add new book</h3>
+                <input type="text" name="title" placeholder="Title" />
+                <input type="text" name="author" placeholder="Author" />
+                <label for="isRead">
+                    Have you read it?
+                    <input type="checkbox" />
+                </label>
+                <button type="button">Submit</button>
+            </form>
+        </div>
+	</body>
+</html>
