@@ -4,6 +4,9 @@ class Book {
 		this.author = author;
 		this.isRead = isRead;
 	}
+	toggleReadStatus() {
+		this.isRead = !this.isRead;
+	}
 }
 
 let library = [];
@@ -14,7 +17,7 @@ document.querySelector(".modal-add-book").onclick = () => modalCard.classList.re
 document.querySelector("form").onclick = (e) => e.stopPropagation();
 document.querySelector("form").onsubmit = addBook;
 
-function addCardEventListeners(bookCard){
+function addCardEventListeners(bookCard) {
 	bookCard.querySelector(".btn-is-read").onclick = toggleReadButton;
 	bookCard.querySelector(".btn-remove").onclick = removeBook;
 }
@@ -34,8 +37,9 @@ function addBook(e) {
 function toggleReadButton(e) {
 	e.target.classList.toggle("is-read");
 	e.target.textContent = e.target.textContent === "Read" ? "Not read" : "Read";
-	let currentBook = library[Number(e.target.parentElement.dataset.index)];
-	currentBook.isRead = !currentBook.isRead;
+	let currentBook = library[e.target.parentElement.dataset.index];
+	currentBook.toggleReadStatus();
+	console.log(currentBook);
 }
 
 function removeBook(e) {
