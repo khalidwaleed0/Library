@@ -78,7 +78,7 @@ main {
 
 form {
 	position: relative;
-	left: calc(50% - 100px);
+	left: calc(50% - 125px);
 	top: calc(50% - 150px);
 	border: none;
 	border-radius: 8px;
