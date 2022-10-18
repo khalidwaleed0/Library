@@ -21,7 +21,6 @@ function addCardEventListeners(bookCard){
 
 function addBook(e) {
 	e.preventDefault();
-	e.target.reset();
 	let title = document.querySelector("input[name='title']").value;
 	let author = document.querySelector("input[name='author']").value;
 	let isRead = document.querySelector("input[type='checkbox']").checked;
@@ -29,6 +28,7 @@ function addBook(e) {
 	library.push(newBook);
 	refreshLibrary();
 	modalCard.classList.remove("active-modal");
+	e.target.reset();
 }
 
 function toggleReadButton(e) {
