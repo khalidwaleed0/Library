@@ -7,10 +7,6 @@ class Book {
 }
 
 let library = [];
-let book1 = new Book("Naruto", "Masashi Kishimoto", true);
-library.push(book1);
-console.log(library);
-
 let modalCard = document.querySelector(".modal-add-book");
 
 document.getElementById("btn-add-book").onclick = () => modalCard.classList.add("active-modal");
@@ -25,6 +21,7 @@ function addCardEventListeners(bookCard){
 
 function addBook(e) {
 	e.preventDefault();
+	e.target.reset();
 	let title = document.querySelector("input[name='title']").value;
 	let author = document.querySelector("input[name='author']").value;
 	let isRead = document.querySelector("input[type='checkbox']").checked;
